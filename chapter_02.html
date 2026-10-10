@@ -1,0 +1,2016 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Italian 1000 · Chapter 2: Daily Life &amp; Home</title>
+<style>
+:root{--bg:#f5f7f6;--text:#18211e;--muted:#67736f;--line:#dfe6e3;--green:#1d6d5c;--green2:#e5f3ee;--shadow:0 10px 28px rgba(24,45,40,.08)}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(#fbfdfc,var(--bg));color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:1120px;margin:auto;padding:12px 12px 80px}
+.hero{padding:22px;border-radius:25px;background:linear-gradient(135deg,#173d36,#2a7667);color:#fff;box-shadow:var(--shadow)}
+.hero-top{display:flex;justify-content:space-between;gap:15px;align-items:flex-start;flex-wrap:wrap}
+.kicker{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#cfe5df;font-weight:850}
+h1{margin:5px 0 7px;font-size:clamp(29px,5.5vw,48px);line-height:1.03}
+.hero p{margin:0;color:#e0efeb;line-height:1.55;max-width:820px}
+.stat{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.badge{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.12);font-size:11px;font-weight:800}
+.chapter-nav{display:flex;gap:5px;flex-wrap:wrap}
+.chapter-link{width:31px;height:31px;border-radius:9px;display:grid;place-items:center;text-decoration:none;color:#e5f2ee;border:1px solid rgba(255,255,255,.23);font-weight:800;font-size:11px}
+.chapter-link.here{background:#fff;color:#184a40}
+.tabs{position:sticky;top:5px;z-index:30;margin:12px 0;padding:7px;background:rgba(255,255,255,.94);border:1px solid var(--line);backdrop-filter:blur(12px);border-radius:16px;display:flex;gap:6px;box-shadow:0 6px 19px rgba(20,40,34,.06)}
+.tab{flex:1;border:0;border-radius:11px;padding:10px;background:transparent;font-weight:850;cursor:pointer;color:#4c5a55}
+.tab.active{background:var(--green);color:#fff}
+.panel{display:none}.panel.active{display:block}
+.toolbar{background:#fff;border:1px solid var(--line);border-radius:17px;padding:11px;margin-bottom:11px;box-shadow:0 5px 18px rgba(20,40,34,.04)}
+.toolbar-row{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.toolbar-row+.toolbar-row{margin-top:7px}
+.toolbar button,.toolbar select{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 9px;color:var(--text);cursor:pointer;font:inherit;font-size:12px}
+.toolbar button.active{background:var(--green);border-color:var(--green);color:#fff}
+.filter.current{background:#edf6f3}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:9px}
+.vcard{height:160px;perspective:900px;cursor:pointer}
+.vinner{height:100%;position:relative;transform-style:preserve-3d;transition:.38s transform}
+.vcard.flipped .vinner{transform:rotateY(180deg)}
+.vface{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:15px;padding:13px;border:1px solid rgba(0,0,0,.055);background:linear-gradient(160deg,var(--cat),#fff);display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 6px 17px rgba(20,40,34,.055)}
+.vback{transform:rotateY(180deg)}
+.vcat{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:#62716c;font-weight:850}
+.prompt,.answer{font-size:20px;font-weight:850;line-height:1.16;overflow-wrap:anywhere}
+.answer{font-size:23px;color:#174d42}
+.meaning,.mini{font-size:10px;color:#6a7772}
+.speak-card{align-self:flex-start;border:0!important;background:rgba(255,255,255,.65)!important;color:#174d42!important;font-weight:800}
+.section-head{margin:17px 2px 9px}
+.section-head h2{margin:0;font-size:22px}.section-head p{margin:4px 0 0;color:var(--muted);font-size:12px;line-height:1.45}
+.read-controls{position:sticky;top:63px;z-index:25}
+.sentences{display:grid;gap:10px}
+.sentence{min-height:245px;perspective:1100px;cursor:pointer}
+.sinner{height:100%;min-height:245px;position:relative;transform-style:preserve-3d;transition:.4s transform}
+.sentence.flipped .sinner{transform:rotateY(180deg)}
+.sface{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fff;border:1px solid var(--line);border-radius:17px;padding:15px;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:space-between}
+.sback{transform:rotateY(180deg);background:linear-gradient(#f7fbf9,#fff)}
+.smeta{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.smeta span{width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:var(--green2);color:var(--green);font-size:10px;font-weight:850}
+.smeta b{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.front-text,.back-text{font-size:clamp(19px,3.2vw,26px);line-height:1.62;font-weight:610}
+.sentence-note{margin-top:8px;font-size:10px;color:var(--muted)}
+.sactions{display:flex;gap:7px;margin-top:12px}
+.sactions button{border:0;border-radius:9px;padding:8px 10px;font-weight:800;cursor:pointer}
+.hear{background:var(--green2);color:#174d42}.flip{background:#eff2f1;color:#43504b}
+.it-word{display:inline;border:0;background:transparent;padding:1px 2px;margin:0;color:inherit;font:inherit;font-weight:inherit;border-radius:6px;cursor:pointer;text-decoration:underline dotted #9aaba5;text-underline-offset:4px}
+.it-word.known{background:var(--known);padding:2px 4px;margin:0 1px;text-decoration:none;border:1px solid rgba(0,0,0,.04)}
+.it-word.current{box-shadow:inset 0 -2px 0 #227461}
+.known-en{background:var(--known);padding:1px 3px;border-radius:5px;border:1px solid rgba(0,0,0,.035)}
+.known-en.current{box-shadow:inset 0 -2px 0 #227461}
+.info{padding:10px 12px;border-radius:12px;background:#edf5f2;color:#34514a;font-size:11px;line-height:1.5;margin-bottom:10px}
+.word-popup{position:fixed;left:50%;bottom:13px;z-index:60;transform:translateX(-50%) translateY(150%);transition:.2s transform;width:min(92vw,520px);background:#15241f;color:#fff;border-radius:17px;padding:14px;box-shadow:0 22px 55px rgba(0,0,0,.27)}
+.word-popup.open{transform:translateX(-50%) translateY(0)}
+.wp-word{font-size:26px;font-weight:900}.wp-meaning{margin-top:3px;color:#cfe3dc}.wp-meta{margin-top:6px;font-size:10px;color:#9fb9b0}
+.wp-actions{margin-top:10px;display:flex;gap:7px}.wp-actions button{border:0;border-radius:9px;padding:8px 10px;font-weight:800;cursor:pointer}
+.bottom-nav{margin-top:18px;display:flex;justify-content:space-between;gap:10px}.bottom-nav a{text-decoration:none;color:#174d42;background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px 13px;font-weight:800}
+@media(max-width:600px){
+ .wrap{padding:7px 7px 65px}.hero{padding:17px 14px;border-radius:19px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.vcard{height:152px}
+ .read-controls{top:59px}.sentence,.sinner{min-height:285px}.sface{padding:13px}
+}
+</style>
+</head>
+<body><div class="wrap">
+<header class="hero">
+ <div class="hero-top"><div>
+  <div class="kicker">Italian 1000 · Chapter 2/10</div>
+  <h1>Daily Life &amp; Home</h1>
+  <p>High-frequency grammar words, numbers, home, family and everyday actions.</p>
+ </div><nav class="chapter-nav"><a class="chapter-link " href="chapter_01.html">1</a><a class="chapter-link here" href="chapter_02.html">2</a><a class="chapter-link " href="chapter_03.html">3</a><a class="chapter-link " href="chapter_04.html">4</a><a class="chapter-link " href="chapter_05.html">5</a><a class="chapter-link " href="chapter_06.html">6</a><a class="chapter-link " href="chapter_07.html">7</a><a class="chapter-link " href="chapter_08.html">8</a><a class="chapter-link " href="chapter_09.html">9</a><a class="chapter-link " href="chapter_10.html">10</a></nav></div>
+ <div class="stat">
+  <span class="badge">100 NEW items in this file</span>
+  <span class="badge">200 unique course items reached</span>
+  <span class="badge">12 new “About me” sentences</span>
+  <span class="badge">Foundation chapter</span>
+ </div>
+</header>
+
+<nav class="tabs">
+ <button class="tab active" data-panel="vocab" type="button">100 new words & phrases</button>
+ <button class="tab" data-panel="reading" type="button">Texts</button>
+</nav>
+
+<section class="panel active" id="vocab">
+ <div class="toolbar">
+  <div class="toolbar-row"><b>Card front:</b><button class="frontmode active" data-front="en" type="button">English → Italian</button><button class="frontmode" data-front="ru" type="button">Russian → Italian</button><button id="flipAll" type="button">Flip all</button><button id="resetAll" type="button">Reset</button></div>
+  <div class="toolbar-row"><b>Category:</b><button class="filter active" data-cat="all" type="button">All 100</button><button class="filter" data-cat="Articles &amp; Determiners" type="button">Articles &amp; Determiners</button><button class="filter" data-cat="Numbers" type="button">Numbers</button><button class="filter" data-cat="Daily Time" type="button">Daily Time</button><button class="filter" data-cat="Home" type="button">Home</button><button class="filter" data-cat="Food Basics" type="button">Food Basics</button><button class="filter" data-cat="Useful Verbs" type="button">Useful Verbs</button><button class="filter" data-cat="Useful Verb Forms" type="button">Useful Verb Forms</button><button class="filter" data-cat="Everyday Adjectives" type="button">Everyday Adjectives</button><button class="filter" data-cat="Family" type="button">Family</button><button class="filter" data-cat="Everyday Chunks" type="button">Everyday Chunks</button></div>
+ </div>
+ <div class="grid" id="vgrid"><article class="vcard" data-cat="Articles &amp; Determiners" data-it="il" data-en="the" data-ru="определённый артикль м.р.">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="prompt">the</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="answer">il</div>
+      <div class="meaning">the</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Articles &amp; Determiners" data-it="lo" data-en="the" data-ru="определённый артикль м.р.">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="prompt">the</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="answer">lo</div>
+      <div class="meaning">the</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Articles &amp; Determiners" data-it="la" data-en="the" data-ru="определённый артикль ж.р.">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="prompt">the</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="answer">la</div>
+      <div class="meaning">the</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Articles &amp; Determiners" data-it="i" data-en="the (plural)" data-ru="определённый артикль мн.ч.">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="prompt">the (plural)</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="answer">i</div>
+      <div class="meaning">the (plural)</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Articles &amp; Determiners" data-it="gli" data-en="the (plural)" data-ru="определённый артикль мн.ч.">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="prompt">the (plural)</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="answer">gli</div>
+      <div class="meaning">the (plural)</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Articles &amp; Determiners" data-it="le" data-en="the (feminine plural)" data-ru="определённый артикль ж.р. мн.ч.">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="prompt">the (feminine plural)</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="answer">le</div>
+      <div class="meaning">the (feminine plural)</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Articles &amp; Determiners" data-it="un" data-en="a / an" data-ru="неопределённый артикль м.р.">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="prompt">a / an</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="answer">un</div>
+      <div class="meaning">a / an</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Articles &amp; Determiners" data-it="una" data-en="a / an" data-ru="неопределённый артикль ж.р.">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="prompt">a / an</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="answer">una</div>
+      <div class="meaning">a / an</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Articles &amp; Determiners" data-it="questo" data-en="this" data-ru="этот">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="prompt">this</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="answer">questo</div>
+      <div class="meaning">this</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Articles &amp; Determiners" data-it="questa" data-en="this" data-ru="эта">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="prompt">this</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f4ef">
+      <span class="vcat">Articles &amp; Determiners</span>
+      <div class="answer">questa</div>
+      <div class="meaning">this</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Numbers" data-it="zero" data-en="zero" data-ru="ноль">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="prompt">zero</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="answer">zero</div>
+      <div class="meaning">zero</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Numbers" data-it="uno" data-en="one" data-ru="один">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="prompt">one</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="answer">uno</div>
+      <div class="meaning">one</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Numbers" data-it="due" data-en="two" data-ru="два">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="prompt">two</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="answer">due</div>
+      <div class="meaning">two</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Numbers" data-it="tre" data-en="three" data-ru="три">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="prompt">three</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="answer">tre</div>
+      <div class="meaning">three</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Numbers" data-it="quattro" data-en="four" data-ru="четыре">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="prompt">four</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="answer">quattro</div>
+      <div class="meaning">four</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Numbers" data-it="cinque" data-en="five" data-ru="пять">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="prompt">five</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="answer">cinque</div>
+      <div class="meaning">five</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Numbers" data-it="sette" data-en="seven" data-ru="семь">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="prompt">seven</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="answer">sette</div>
+      <div class="meaning">seven</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Numbers" data-it="otto" data-en="eight" data-ru="восемь">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="prompt">eight</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="answer">otto</div>
+      <div class="meaning">eight</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Numbers" data-it="nove" data-en="nine" data-ru="девять">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="prompt">nine</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="answer">nove</div>
+      <div class="meaning">nine</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Numbers" data-it="dieci" data-en="ten" data-ru="десять">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="prompt">ten</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9eeff">
+      <span class="vcat">Numbers</span>
+      <div class="answer">dieci</div>
+      <div class="meaning">ten</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Daily Time" data-it="mattina" data-en="morning" data-ru="утро">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="prompt">morning</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="answer">mattina</div>
+      <div class="meaning">morning</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Daily Time" data-it="pomeriggio" data-en="afternoon" data-ru="день / после полудня">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="prompt">afternoon</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="answer">pomeriggio</div>
+      <div class="meaning">afternoon</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Daily Time" data-it="notte" data-en="night" data-ru="ночь">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="prompt">night</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="answer">notte</div>
+      <div class="meaning">night</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Daily Time" data-it="ora" data-en="hour / now" data-ru="час / сейчас">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="prompt">hour / now</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="answer">ora</div>
+      <div class="meaning">hour / now</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Daily Time" data-it="minuto" data-en="minute" data-ru="минута">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="prompt">minute</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="answer">minuto</div>
+      <div class="meaning">minute</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Daily Time" data-it="presto" data-en="early / soon" data-ru="рано / скоро">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="prompt">early / soon</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="answer">presto</div>
+      <div class="meaning">early / soon</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Daily Time" data-it="tardi" data-en="late" data-ru="поздно">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="prompt">late</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="answer">tardi</div>
+      <div class="meaning">late</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Daily Time" data-it="prima" data-en="before / first" data-ru="до / сначала">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="prompt">before / first</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="answer">prima</div>
+      <div class="meaning">before / first</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Daily Time" data-it="dopo" data-en="after / afterwards" data-ru="после / потом">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="prompt">after / afterwards</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="answer">dopo</div>
+      <div class="meaning">after / afterwards</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Daily Time" data-it="subito" data-en="immediately" data-ru="сразу">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="prompt">immediately</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#fff0dc">
+      <span class="vcat">Daily Time</span>
+      <div class="answer">subito</div>
+      <div class="meaning">immediately</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Home" data-it="stanza" data-en="room" data-ru="комната">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="prompt">room</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="answer">stanza</div>
+      <div class="meaning">room</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Home" data-it="cucina" data-en="kitchen" data-ru="кухня">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="prompt">kitchen</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="answer">cucina</div>
+      <div class="meaning">kitchen</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Home" data-it="bagno" data-en="bathroom" data-ru="ванная">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="prompt">bathroom</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="answer">bagno</div>
+      <div class="meaning">bathroom</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Home" data-it="porta" data-en="door" data-ru="дверь">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="prompt">door</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="answer">porta</div>
+      <div class="meaning">door</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Home" data-it="finestra" data-en="window" data-ru="окно">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="prompt">window</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="answer">finestra</div>
+      <div class="meaning">window</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Home" data-it="tavolo" data-en="table" data-ru="стол">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="prompt">table</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="answer">tavolo</div>
+      <div class="meaning">table</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Home" data-it="sedia" data-en="chair" data-ru="стул">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="prompt">chair</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="answer">sedia</div>
+      <div class="meaning">chair</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Home" data-it="letto" data-en="bed" data-ru="кровать">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="prompt">bed</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="answer">letto</div>
+      <div class="meaning">bed</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Home" data-it="chiave" data-en="key" data-ru="ключ">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="prompt">key</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="answer">chiave</div>
+      <div class="meaning">key</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Home" data-it="appartamento" data-en="apartment" data-ru="квартира">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="prompt">apartment</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f6e8ff">
+      <span class="vcat">Home</span>
+      <div class="answer">appartamento</div>
+      <div class="meaning">apartment</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Food Basics" data-it="latte" data-en="milk" data-ru="молоко">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="prompt">milk</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="answer">latte</div>
+      <div class="meaning">milk</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Food Basics" data-it="tè" data-en="tea" data-ru="чай">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="prompt">tea</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="answer">tè</div>
+      <div class="meaning">tea</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Food Basics" data-it="pasta" data-en="pasta" data-ru="паста / макароны">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="prompt">pasta</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="answer">pasta</div>
+      <div class="meaning">pasta</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Food Basics" data-it="riso" data-en="rice" data-ru="рис">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="prompt">rice</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="answer">riso</div>
+      <div class="meaning">rice</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Food Basics" data-it="carne" data-en="meat" data-ru="мясо">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="prompt">meat</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="answer">carne</div>
+      <div class="meaning">meat</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Food Basics" data-it="pesce" data-en="fish" data-ru="рыба">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="prompt">fish</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="answer">pesce</div>
+      <div class="meaning">fish</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Food Basics" data-it="frutta" data-en="fruit" data-ru="фрукты">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="prompt">fruit</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="answer">frutta</div>
+      <div class="meaning">fruit</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Food Basics" data-it="verdura" data-en="vegetables" data-ru="овощи">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="prompt">vegetables</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="answer">verdura</div>
+      <div class="meaning">vegetables</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Food Basics" data-it="formaggio" data-en="cheese" data-ru="сыр">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="prompt">cheese</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="answer">formaggio</div>
+      <div class="meaning">cheese</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Food Basics" data-it="colazione" data-en="breakfast" data-ru="завтрак">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="prompt">breakfast</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e9f7df">
+      <span class="vcat">Food Basics</span>
+      <div class="answer">colazione</div>
+      <div class="meaning">breakfast</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verbs" data-it="prendere" data-en="to take" data-ru="брать">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="prompt">to take</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="answer">prendere</div>
+      <div class="meaning">to take</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verbs" data-it="dare" data-en="to give" data-ru="давать">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="prompt">to give</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="answer">dare</div>
+      <div class="meaning">to give</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verbs" data-it="vedere" data-en="to see" data-ru="видеть">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="prompt">to see</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="answer">vedere</div>
+      <div class="meaning">to see</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verbs" data-it="leggere" data-en="to read" data-ru="читать">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="prompt">to read</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="answer">leggere</div>
+      <div class="meaning">to read</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verbs" data-it="scrivere" data-en="to write" data-ru="писать">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="prompt">to write</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="answer">scrivere</div>
+      <div class="meaning">to write</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verbs" data-it="dormire" data-en="to sleep" data-ru="спать">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="prompt">to sleep</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="answer">dormire</div>
+      <div class="meaning">to sleep</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verbs" data-it="aprire" data-en="to open" data-ru="открывать">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="prompt">to open</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="answer">aprire</div>
+      <div class="meaning">to open</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verbs" data-it="chiudere" data-en="to close" data-ru="закрывать">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="prompt">to close</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="answer">chiudere</div>
+      <div class="meaning">to close</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verbs" data-it="comprare" data-en="to buy" data-ru="покупать">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="prompt">to buy</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="answer">comprare</div>
+      <div class="meaning">to buy</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verbs" data-it="pagare" data-en="to pay" data-ru="платить">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="prompt">to pay</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#ffe9ec">
+      <span class="vcat">Useful Verbs</span>
+      <div class="answer">pagare</div>
+      <div class="meaning">to pay</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verb Forms" data-it="prendo" data-en="I take" data-ru="я беру">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="prompt">I take</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="answer">prendo</div>
+      <div class="meaning">I take</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verb Forms" data-it="vedo" data-en="I see" data-ru="я вижу">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="prompt">I see</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="answer">vedo</div>
+      <div class="meaning">I see</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verb Forms" data-it="leggo" data-en="I read" data-ru="я читаю">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="prompt">I read</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="answer">leggo</div>
+      <div class="meaning">I read</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verb Forms" data-it="scrivo" data-en="I write" data-ru="я пишу">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="prompt">I write</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="answer">scrivo</div>
+      <div class="meaning">I write</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verb Forms" data-it="dormo" data-en="I sleep" data-ru="я сплю">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="prompt">I sleep</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="answer">dormo</div>
+      <div class="meaning">I sleep</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verb Forms" data-it="apro" data-en="I open" data-ru="я открываю">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="prompt">I open</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="answer">apro</div>
+      <div class="meaning">I open</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verb Forms" data-it="chiudo" data-en="I close" data-ru="я закрываю">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="prompt">I close</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="answer">chiudo</div>
+      <div class="meaning">I close</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verb Forms" data-it="compro" data-en="I buy" data-ru="я покупаю">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="prompt">I buy</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="answer">compro</div>
+      <div class="meaning">I buy</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verb Forms" data-it="pago" data-en="I pay" data-ru="я плачу">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="prompt">I pay</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="answer">pago</div>
+      <div class="meaning">I pay</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Useful Verb Forms" data-it="mangio" data-en="I eat" data-ru="я ем">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="prompt">I eat</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e4f2ff">
+      <span class="vcat">Useful Verb Forms</span>
+      <div class="answer">mangio</div>
+      <div class="meaning">I eat</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Adjectives" data-it="facile" data-en="easy" data-ru="лёгкий">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="prompt">easy</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="answer">facile</div>
+      <div class="meaning">easy</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Adjectives" data-it="difficile" data-en="difficult" data-ru="трудный">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="prompt">difficult</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="answer">difficile</div>
+      <div class="meaning">difficult</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Adjectives" data-it="importante" data-en="important" data-ru="важный">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="prompt">important</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="answer">importante</div>
+      <div class="meaning">important</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Adjectives" data-it="possibile" data-en="possible" data-ru="возможный">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="prompt">possible</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="answer">possibile</div>
+      <div class="meaning">possible</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Adjectives" data-it="pronto" data-en="ready" data-ru="готовый">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="prompt">ready</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="answer">pronto</div>
+      <div class="meaning">ready</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Adjectives" data-it="stanco" data-en="tired" data-ru="уставший">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="prompt">tired</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="answer">stanco</div>
+      <div class="meaning">tired</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Adjectives" data-it="felice" data-en="happy" data-ru="счастливый">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="prompt">happy</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="answer">felice</div>
+      <div class="meaning">happy</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Adjectives" data-it="triste" data-en="sad" data-ru="грустный">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="prompt">sad</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="answer">triste</div>
+      <div class="meaning">sad</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Adjectives" data-it="caldo" data-en="hot / warm" data-ru="горячий / тёплый">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="prompt">hot / warm</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="answer">caldo</div>
+      <div class="meaning">hot / warm</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Adjectives" data-it="freddo" data-en="cold" data-ru="холодный">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="prompt">cold</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f3f0dd">
+      <span class="vcat">Everyday Adjectives</span>
+      <div class="answer">freddo</div>
+      <div class="meaning">cold</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Family" data-it="madre" data-en="mother" data-ru="мать">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="prompt">mother</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="answer">madre</div>
+      <div class="meaning">mother</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Family" data-it="padre" data-en="father" data-ru="отец">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="prompt">father</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="answer">padre</div>
+      <div class="meaning">father</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Family" data-it="figlio" data-en="son" data-ru="сын">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="prompt">son</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="answer">figlio</div>
+      <div class="meaning">son</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Family" data-it="figlia" data-en="daughter" data-ru="дочь">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="prompt">daughter</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="answer">figlia</div>
+      <div class="meaning">daughter</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Family" data-it="fratello" data-en="brother" data-ru="брат">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="prompt">brother</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="answer">fratello</div>
+      <div class="meaning">brother</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Family" data-it="sorella" data-en="sister" data-ru="сестра">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="prompt">sister</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="answer">sorella</div>
+      <div class="meaning">sister</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Family" data-it="marito" data-en="husband" data-ru="муж">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="prompt">husband</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="answer">marito</div>
+      <div class="meaning">husband</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Family" data-it="moglie" data-en="wife" data-ru="жена">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="prompt">wife</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="answer">moglie</div>
+      <div class="meaning">wife</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Family" data-it="genitori" data-en="parents" data-ru="родители">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="prompt">parents</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="answer">genitori</div>
+      <div class="meaning">parents</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Family" data-it="bambini" data-en="children" data-ru="дети">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="prompt">children</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#e8f3f0">
+      <span class="vcat">Family</span>
+      <div class="answer">bambini</div>
+      <div class="meaning">children</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Chunks" data-it="che ore sono?" data-en="what time is it?" data-ru="который час?">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="prompt">what time is it?</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="answer">che ore sono?</div>
+      <div class="meaning">what time is it?</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Chunks" data-it="ho fame" data-en="I am hungry" data-ru="я голоден">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="prompt">I am hungry</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="answer">ho fame</div>
+      <div class="meaning">I am hungry</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Chunks" data-it="ho sete" data-en="I am thirsty" data-ru="я хочу пить">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="prompt">I am thirsty</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="answer">ho sete</div>
+      <div class="meaning">I am thirsty</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Chunks" data-it="va bene" data-en="okay / that&#x27;s fine" data-ru="хорошо / ладно">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="prompt">okay / that&#x27;s fine</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="answer">va bene</div>
+      <div class="meaning">okay / that&#x27;s fine</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Chunks" data-it="non lo so" data-en="I don&#x27;t know" data-ru="я не знаю">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="prompt">I don&#x27;t know</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="answer">non lo so</div>
+      <div class="meaning">I don&#x27;t know</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Chunks" data-it="certo" data-en="certainly / sure" data-ru="конечно">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="prompt">certainly / sure</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="answer">certo</div>
+      <div class="meaning">certainly / sure</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Chunks" data-it="forse" data-en="maybe" data-ru="возможно">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="prompt">maybe</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="answer">forse</div>
+      <div class="meaning">maybe</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Chunks" data-it="davvero" data-en="really" data-ru="правда / действительно">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="prompt">really</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="answer">davvero</div>
+      <div class="meaning">really</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Chunks" data-it="insieme" data-en="together" data-ru="вместе">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="prompt">together</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="answer">insieme</div>
+      <div class="meaning">together</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article>
+<article class="vcard" data-cat="Everyday Chunks" data-it="ancora" data-en="again / still" data-ru="снова / ещё">
+  <div class="vinner">
+    <div class="vface vfront" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="prompt">again / still</div>
+      <div class="mini">Tap to reveal Italian</div>
+    </div>
+    <div class="vface vback" style="--cat:#f1e8dc">
+      <span class="vcat">Everyday Chunks</span>
+      <div class="answer">ancora</div>
+      <div class="meaning">again / still</div>
+      <button class="speak-card" type="button">🔊 Italian</button>
+    </div>
+  </div>
+</article></div>
+</section>
+
+<section class="panel" id="reading">
+ <div class="toolbar read-controls">
+  <div class="toolbar-row"><b>Show one language:</b><button class="readmode active" data-mode="it" type="button">Italian</button><button class="readmode" data-mode="en" type="button">English</button><button class="readmode" data-mode="ru" type="button">Russian</button><button id="resetSent" type="button">Reset cards</button></div>
+  <div class="toolbar-row"><b>Voice:</b><select id="voiceSelect"></select><label>Speed <select id="rate"><option value=".70">Slow</option><option value=".84" selected>Learning</option><option value="1">Normal</option></select></label></div>
+ </div>
+ <div class="info"><b>Colour logic:</b> coloured Italian words/phrases are already in Chapters 1–2. A darker underline marks items introduced in this chapter. Earlier vocabulary is deliberately recycled in the texts, but the 100-card deck itself contains only new items.</div>
+
+ <div class="section-head"><h2>About me · new text</h2><p>This is a different text for Chapter 2, not the previous chapter with extra sentences attached. 12 sentences.</p></div>
+ <div class="sentences"><article class="sentence" data-it="La mattina preferisco iniziare la giornata con calma." data-en="In the morning I prefer to start the day calmly." data-ru="Утром я предпочитаю начинать день спокойно." data-ithtml="&lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;La&quot; data-meaning=&quot;the&quot; data-ru=&quot;определённый артикль ж.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;La&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;mattina&quot; data-meaning=&quot;morning&quot; data-ru=&quot;утро&quot; data-chapter=&quot;2&quot; data-category=&quot;Daily Time&quot; style=&quot;--known:#fff0dc&quot;&gt;mattina&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;preferisco&quot; data-meaning=&quot;I prefer&quot; data-ru=&quot;я предпочитаю&quot;&gt;preferisco&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;iniziare&quot; data-meaning=&quot;to begin / start&quot; data-ru=&quot;начинать&quot;&gt;iniziare&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;la&quot; data-meaning=&quot;the&quot; data-ru=&quot;определённый артикль ж.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;la&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;giornata&quot; data-meaning=&quot;day / whole day&quot; data-ru=&quot;день / весь день&quot;&gt;giornata&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;con&quot; data-meaning=&quot;with&quot; data-ru=&quot;с&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;con&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;calma&quot; data-meaning=&quot;calm / calmly&quot; data-ru=&quot;спокойствие / спокойно&quot;&gt;calma&lt;/button&gt;." data-enhtml="In &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f4ef&quot; title=&quot;Course item · Chapter 2&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;known-en current&quot; style=&quot;--known:#fff0dc&quot; title=&quot;Course item · Chapter 2&quot;&gt;morning&lt;/span&gt; &lt;span class=&quot;known-en&quot; style=&quot;--known:#f6e8ff&quot; title=&quot;Course item · Chapter 1&quot;&gt;I&lt;/span&gt; prefer to start &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f4ef&quot; title=&quot;Course item · Chapter 2&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;known-en&quot; style=&quot;--known:#e9eeff&quot; title=&quot;Course item · Chapter 1&quot;&gt;day&lt;/span&gt; calmly.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>1</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word known current" type="button" data-word="La" data-meaning="the" data-ru="определённый артикль ж.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">La</button> <button class="it-word known current" type="button" data-word="mattina" data-meaning="morning" data-ru="утро" data-chapter="2" data-category="Daily Time" style="--known:#fff0dc">mattina</button> <button class="it-word extra" type="button" data-word="preferisco" data-meaning="I prefer" data-ru="я предпочитаю">preferisco</button> <button class="it-word extra" type="button" data-word="iniziare" data-meaning="to begin / start" data-ru="начинать">iniziare</button> <button class="it-word known current" type="button" data-word="la" data-meaning="the" data-ru="определённый артикль ж.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">la</button> <button class="it-word extra" type="button" data-word="giornata" data-meaning="day / whole day" data-ru="день / весь день">giornata</button> <button class="it-word known" type="button" data-word="con" data-meaning="with" data-ru="с" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">con</button> <button class="it-word extra" type="button" data-word="calma" data-meaning="calm / calmly" data-ru="спокойствие / спокойно">calma</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>1</span><b class="back-label">English</b></div>
+        <div class="back-text">In <span class="known-en current" style="--known:#e4f4ef" title="Course item · Chapter 2">the</span> <span class="known-en current" style="--known:#fff0dc" title="Course item · Chapter 2">morning</span> <span class="known-en" style="--known:#f6e8ff" title="Course item · Chapter 1">I</span> prefer to start <span class="known-en current" style="--known:#e4f4ef" title="Course item · Chapter 2">the</span> <span class="known-en" style="--known:#e9eeff" title="Course item · Chapter 1">day</span> calmly.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="Guardo che ore sono e penso a quello che devo fare." data-en="I check the time and think about what I have to do." data-ru="Я смотрю, который час, и думаю о том, что мне нужно сделать." data-ithtml="&lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;Guardo&quot; data-meaning=&quot;I look / watch&quot; data-ru=&quot;я смотрю&quot;&gt;Guardo&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;che&quot; data-meaning=&quot;what / that&quot; data-ru=&quot;что / который&quot; data-chapter=&quot;1&quot; data-category=&quot;Question Words&quot; style=&quot;--known:#fff0dc&quot;&gt;che&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;ore&quot; data-meaning=&quot;hours&quot; data-ru=&quot;часы&quot;&gt;ore&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;sono&quot; data-meaning=&quot;I am / they are&quot; data-ru=&quot;я есть / они есть&quot; data-chapter=&quot;1&quot; data-category=&quot;Be &amp;amp; Have&quot; style=&quot;--known:#ffe9ec&quot;&gt;sono&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;e&quot; data-meaning=&quot;and&quot; data-ru=&quot;и&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;e&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;penso&quot; data-meaning=&quot;I think&quot; data-ru=&quot;я думаю&quot;&gt;penso&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;a&quot; data-meaning=&quot;to / at&quot; data-ru=&quot;к / в / на&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;a&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;quello&quot; data-meaning=&quot;that / what&quot; data-ru=&quot;тот / то&quot;&gt;quello&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;che&quot; data-meaning=&quot;what / that&quot; data-ru=&quot;что / который&quot; data-chapter=&quot;1&quot; data-category=&quot;Question Words&quot; style=&quot;--known:#fff0dc&quot;&gt;che&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;devo&quot; data-meaning=&quot;I must / I have to&quot; data-ru=&quot;я должен / мне нужно&quot;&gt;devo&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;fare&quot; data-meaning=&quot;to do / make&quot; data-ru=&quot;делать&quot; data-chapter=&quot;1&quot; data-category=&quot;Core Verbs 1&quot; style=&quot;--known:#e4f2ff&quot;&gt;fare&lt;/button&gt;." data-enhtml="&lt;span class=&quot;known-en&quot; style=&quot;--known:#f6e8ff&quot; title=&quot;Course item · Chapter 1&quot;&gt;I&lt;/span&gt; check &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f4ef&quot; title=&quot;Course item · Chapter 2&quot;&gt;the&lt;/span&gt; time &lt;span class=&quot;known-en&quot; style=&quot;--known:#e9f7df&quot; title=&quot;Course item · Chapter 1&quot;&gt;and&lt;/span&gt; think about what &lt;span class=&quot;known-en&quot; style=&quot;--known:#ffe9ec&quot; title=&quot;Course item · Chapter 1&quot;&gt;I have&lt;/span&gt; to do.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>2</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word extra" type="button" data-word="Guardo" data-meaning="I look / watch" data-ru="я смотрю">Guardo</button> <button class="it-word known" type="button" data-word="che" data-meaning="what / that" data-ru="что / который" data-chapter="1" data-category="Question Words" style="--known:#fff0dc">che</button> <button class="it-word extra" type="button" data-word="ore" data-meaning="hours" data-ru="часы">ore</button> <button class="it-word known" type="button" data-word="sono" data-meaning="I am / they are" data-ru="я есть / они есть" data-chapter="1" data-category="Be &amp; Have" style="--known:#ffe9ec">sono</button> <button class="it-word known" type="button" data-word="e" data-meaning="and" data-ru="и" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">e</button> <button class="it-word extra" type="button" data-word="penso" data-meaning="I think" data-ru="я думаю">penso</button> <button class="it-word known" type="button" data-word="a" data-meaning="to / at" data-ru="к / в / на" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">a</button> <button class="it-word extra" type="button" data-word="quello" data-meaning="that / what" data-ru="тот / то">quello</button> <button class="it-word known" type="button" data-word="che" data-meaning="what / that" data-ru="что / который" data-chapter="1" data-category="Question Words" style="--known:#fff0dc">che</button> <button class="it-word extra" type="button" data-word="devo" data-meaning="I must / I have to" data-ru="я должен / мне нужно">devo</button> <button class="it-word known" type="button" data-word="fare" data-meaning="to do / make" data-ru="делать" data-chapter="1" data-category="Core Verbs 1" style="--known:#e4f2ff">fare</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>2</span><b class="back-label">English</b></div>
+        <div class="back-text"><span class="known-en" style="--known:#f6e8ff" title="Course item · Chapter 1">I</span> check <span class="known-en current" style="--known:#e4f4ef" title="Course item · Chapter 2">the</span> time <span class="known-en" style="--known:#e9f7df" title="Course item · Chapter 1">and</span> think about what <span class="known-en" style="--known:#ffe9ec" title="Course item · Chapter 1">I have</span> to do.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="A casa preparo le cose per il lavoro." data-en="At home I prepare things for work." data-ru="Дома я готовлю всё для работы." data-ithtml="&lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;A&quot; data-meaning=&quot;to / at&quot; data-ru=&quot;к / в / на&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;A&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;casa&quot; data-meaning=&quot;house / home&quot; data-ru=&quot;дом&quot; data-chapter=&quot;1&quot; data-category=&quot;Places &amp;amp; Languages&quot; style=&quot;--known:#f1e8dc&quot;&gt;casa&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;preparo&quot; data-meaning=&quot;I prepare&quot; data-ru=&quot;я готовлю / подготавливаю&quot;&gt;preparo&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;le&quot; data-meaning=&quot;the (feminine plural)&quot; data-ru=&quot;определённый артикль ж.р. мн.ч.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;le&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;cose&quot; data-meaning=&quot;things&quot; data-ru=&quot;вещи / дела&quot;&gt;cose&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;per&quot; data-meaning=&quot;for / to&quot; data-ru=&quot;для / чтобы&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;per&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;il&quot; data-meaning=&quot;the&quot; data-ru=&quot;определённый артикль м.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;il&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;lavoro&quot; data-meaning=&quot;work / job&quot; data-ru=&quot;работа&quot; data-chapter=&quot;1&quot; data-category=&quot;Places &amp;amp; Languages&quot; style=&quot;--known:#f1e8dc&quot;&gt;lavoro&lt;/button&gt;." data-enhtml="At home &lt;span class=&quot;known-en&quot; style=&quot;--known:#f6e8ff&quot; title=&quot;Course item · Chapter 1&quot;&gt;I&lt;/span&gt; prepare things for work.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>3</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word known" type="button" data-word="A" data-meaning="to / at" data-ru="к / в / на" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">A</button> <button class="it-word known" type="button" data-word="casa" data-meaning="house / home" data-ru="дом" data-chapter="1" data-category="Places &amp; Languages" style="--known:#f1e8dc">casa</button> <button class="it-word extra" type="button" data-word="preparo" data-meaning="I prepare" data-ru="я готовлю / подготавливаю">preparo</button> <button class="it-word known current" type="button" data-word="le" data-meaning="the (feminine plural)" data-ru="определённый артикль ж.р. мн.ч." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">le</button> <button class="it-word extra" type="button" data-word="cose" data-meaning="things" data-ru="вещи / дела">cose</button> <button class="it-word known" type="button" data-word="per" data-meaning="for / to" data-ru="для / чтобы" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">per</button> <button class="it-word known current" type="button" data-word="il" data-meaning="the" data-ru="определённый артикль м.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">il</button> <button class="it-word known" type="button" data-word="lavoro" data-meaning="work / job" data-ru="работа" data-chapter="1" data-category="Places &amp; Languages" style="--known:#f1e8dc">lavoro</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>3</span><b class="back-label">English</b></div>
+        <div class="back-text">At home <span class="known-en" style="--known:#f6e8ff" title="Course item · Chapter 1">I</span> prepare things for work.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="Prima delle lezioni leggo messaggi e apro il computer." data-en="Before lessons I read messages and open the computer." data-ru="Перед уроками я читаю сообщения и включаю компьютер." data-ithtml="&lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;Prima&quot; data-meaning=&quot;before / first&quot; data-ru=&quot;до / сначала&quot; data-chapter=&quot;2&quot; data-category=&quot;Daily Time&quot; style=&quot;--known:#fff0dc&quot;&gt;Prima&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;delle&quot; data-meaning=&quot;some / of the&quot; data-ru=&quot;некоторые / из (с артиклем)&quot;&gt;delle&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;lezioni&quot; data-meaning=&quot;lessons&quot; data-ru=&quot;уроки&quot;&gt;lezioni&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;leggo&quot; data-meaning=&quot;I read&quot; data-ru=&quot;я читаю&quot; data-chapter=&quot;2&quot; data-category=&quot;Useful Verb Forms&quot; style=&quot;--known:#e4f2ff&quot;&gt;leggo&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;messaggi&quot; data-meaning=&quot;messages&quot; data-ru=&quot;сообщения&quot;&gt;messaggi&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;e&quot; data-meaning=&quot;and&quot; data-ru=&quot;и&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;e&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;apro&quot; data-meaning=&quot;I open&quot; data-ru=&quot;я открываю&quot; data-chapter=&quot;2&quot; data-category=&quot;Useful Verb Forms&quot; style=&quot;--known:#e4f2ff&quot;&gt;apro&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;il&quot; data-meaning=&quot;the&quot; data-ru=&quot;определённый артикль м.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;il&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;computer&quot; data-meaning=&quot;computer&quot; data-ru=&quot;компьютер&quot;&gt;computer&lt;/button&gt;." data-enhtml="Before lessons &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f2ff&quot; title=&quot;Course item · Chapter 2&quot;&gt;I read&lt;/span&gt; messages &lt;span class=&quot;known-en&quot; style=&quot;--known:#e9f7df&quot; title=&quot;Course item · Chapter 1&quot;&gt;and&lt;/span&gt; open &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f4ef&quot; title=&quot;Course item · Chapter 2&quot;&gt;the&lt;/span&gt; computer.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>4</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word known current" type="button" data-word="Prima" data-meaning="before / first" data-ru="до / сначала" data-chapter="2" data-category="Daily Time" style="--known:#fff0dc">Prima</button> <button class="it-word extra" type="button" data-word="delle" data-meaning="some / of the" data-ru="некоторые / из (с артиклем)">delle</button> <button class="it-word extra" type="button" data-word="lezioni" data-meaning="lessons" data-ru="уроки">lezioni</button> <button class="it-word known current" type="button" data-word="leggo" data-meaning="I read" data-ru="я читаю" data-chapter="2" data-category="Useful Verb Forms" style="--known:#e4f2ff">leggo</button> <button class="it-word extra" type="button" data-word="messaggi" data-meaning="messages" data-ru="сообщения">messaggi</button> <button class="it-word known" type="button" data-word="e" data-meaning="and" data-ru="и" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">e</button> <button class="it-word known current" type="button" data-word="apro" data-meaning="I open" data-ru="я открываю" data-chapter="2" data-category="Useful Verb Forms" style="--known:#e4f2ff">apro</button> <button class="it-word known current" type="button" data-word="il" data-meaning="the" data-ru="определённый артикль м.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">il</button> <button class="it-word extra" type="button" data-word="computer" data-meaning="computer" data-ru="компьютер">computer</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>4</span><b class="back-label">English</b></div>
+        <div class="back-text">Before lessons <span class="known-en current" style="--known:#e4f2ff" title="Course item · Chapter 2">I read</span> messages <span class="known-en" style="--known:#e9f7df" title="Course item · Chapter 1">and</span> open <span class="known-en current" style="--known:#e4f4ef" title="Course item · Chapter 2">the</span> computer.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="Durante il giorno lavoro, leggo e scrivo molto." data-en="During the day I work, read and write a lot." data-ru="В течение дня я много работаю, читаю и пишу." data-ithtml="&lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;Durante&quot; data-meaning=&quot;during&quot; data-ru=&quot;во время&quot;&gt;Durante&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;il&quot; data-meaning=&quot;the&quot; data-ru=&quot;определённый артикль м.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;il&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;giorno&quot; data-meaning=&quot;day&quot; data-ru=&quot;день&quot; data-chapter=&quot;1&quot; data-category=&quot;Time&quot; style=&quot;--known:#e9eeff&quot;&gt;giorno&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;lavoro&quot; data-meaning=&quot;work / job&quot; data-ru=&quot;работа&quot; data-chapter=&quot;1&quot; data-category=&quot;Places &amp;amp; Languages&quot; style=&quot;--known:#f1e8dc&quot;&gt;lavoro&lt;/button&gt;, &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;leggo&quot; data-meaning=&quot;I read&quot; data-ru=&quot;я читаю&quot; data-chapter=&quot;2&quot; data-category=&quot;Useful Verb Forms&quot; style=&quot;--known:#e4f2ff&quot;&gt;leggo&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;e&quot; data-meaning=&quot;and&quot; data-ru=&quot;и&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;e&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;scrivo&quot; data-meaning=&quot;I write&quot; data-ru=&quot;я пишу&quot; data-chapter=&quot;2&quot; data-category=&quot;Useful Verb Forms&quot; style=&quot;--known:#e4f2ff&quot;&gt;scrivo&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;molto&quot; data-meaning=&quot;very / much&quot; data-ru=&quot;очень / много&quot; data-chapter=&quot;1&quot; data-category=&quot;Quantity &amp;amp; Frequency&quot; style=&quot;--known:#f6e8ff&quot;&gt;molto&lt;/button&gt;." data-enhtml="During &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f4ef&quot; title=&quot;Course item · Chapter 2&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;known-en&quot; style=&quot;--known:#e9eeff&quot; title=&quot;Course item · Chapter 1&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;known-en&quot; style=&quot;--known:#f6e8ff&quot; title=&quot;Course item · Chapter 1&quot;&gt;I&lt;/span&gt; work, read &lt;span class=&quot;known-en&quot; style=&quot;--known:#e9f7df&quot; title=&quot;Course item · Chapter 1&quot;&gt;and&lt;/span&gt; write a lot.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>5</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word extra" type="button" data-word="Durante" data-meaning="during" data-ru="во время">Durante</button> <button class="it-word known current" type="button" data-word="il" data-meaning="the" data-ru="определённый артикль м.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">il</button> <button class="it-word known" type="button" data-word="giorno" data-meaning="day" data-ru="день" data-chapter="1" data-category="Time" style="--known:#e9eeff">giorno</button> <button class="it-word known" type="button" data-word="lavoro" data-meaning="work / job" data-ru="работа" data-chapter="1" data-category="Places &amp; Languages" style="--known:#f1e8dc">lavoro</button>, <button class="it-word known current" type="button" data-word="leggo" data-meaning="I read" data-ru="я читаю" data-chapter="2" data-category="Useful Verb Forms" style="--known:#e4f2ff">leggo</button> <button class="it-word known" type="button" data-word="e" data-meaning="and" data-ru="и" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">e</button> <button class="it-word known current" type="button" data-word="scrivo" data-meaning="I write" data-ru="я пишу" data-chapter="2" data-category="Useful Verb Forms" style="--known:#e4f2ff">scrivo</button> <button class="it-word known" type="button" data-word="molto" data-meaning="very / much" data-ru="очень / много" data-chapter="1" data-category="Quantity &amp; Frequency" style="--known:#f6e8ff">molto</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>5</span><b class="back-label">English</b></div>
+        <div class="back-text">During <span class="known-en current" style="--known:#e4f4ef" title="Course item · Chapter 2">the</span> <span class="known-en" style="--known:#e9eeff" title="Course item · Chapter 1">day</span> <span class="known-en" style="--known:#f6e8ff" title="Course item · Chapter 1">I</span> work, read <span class="known-en" style="--known:#e9f7df" title="Course item · Chapter 1">and</span> write a lot.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="Quando sono stanco faccio una piccola pausa." data-en="When I am tired, I take a short break." data-ru="Когда я устаю, я делаю небольшой перерыв." data-ithtml="&lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;Quando&quot; data-meaning=&quot;when&quot; data-ru=&quot;когда&quot; data-chapter=&quot;1&quot; data-category=&quot;Question Words&quot; style=&quot;--known:#fff0dc&quot;&gt;Quando&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;sono&quot; data-meaning=&quot;I am / they are&quot; data-ru=&quot;я есть / они есть&quot; data-chapter=&quot;1&quot; data-category=&quot;Be &amp;amp; Have&quot; style=&quot;--known:#ffe9ec&quot;&gt;sono&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;stanco&quot; data-meaning=&quot;tired&quot; data-ru=&quot;уставший&quot; data-chapter=&quot;2&quot; data-category=&quot;Everyday Adjectives&quot; style=&quot;--known:#f3f0dd&quot;&gt;stanco&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;faccio&quot; data-meaning=&quot;I do / make&quot; data-ru=&quot;я делаю&quot; data-chapter=&quot;1&quot; data-category=&quot;Core Verbs 1&quot; style=&quot;--known:#e4f2ff&quot;&gt;faccio&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;una&quot; data-meaning=&quot;a / an&quot; data-ru=&quot;неопределённый артикль ж.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;una&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;piccola&quot; data-meaning=&quot;small&quot; data-ru=&quot;маленькая&quot;&gt;piccola&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;pausa&quot; data-meaning=&quot;break / pause&quot; data-ru=&quot;перерыв&quot;&gt;pausa&lt;/button&gt;." data-enhtml="&lt;span class=&quot;known-en&quot; style=&quot;--known:#fff0dc&quot; title=&quot;Course item · Chapter 1&quot;&gt;When&lt;/span&gt; &lt;span class=&quot;known-en&quot; style=&quot;--known:#f6e8ff&quot; title=&quot;Course item · Chapter 1&quot;&gt;I&lt;/span&gt; am &lt;span class=&quot;known-en current&quot; style=&quot;--known:#f3f0dd&quot; title=&quot;Course item · Chapter 2&quot;&gt;tired&lt;/span&gt;, &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f2ff&quot; title=&quot;Course item · Chapter 2&quot;&gt;I take&lt;/span&gt; a short break.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>6</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word known" type="button" data-word="Quando" data-meaning="when" data-ru="когда" data-chapter="1" data-category="Question Words" style="--known:#fff0dc">Quando</button> <button class="it-word known" type="button" data-word="sono" data-meaning="I am / they are" data-ru="я есть / они есть" data-chapter="1" data-category="Be &amp; Have" style="--known:#ffe9ec">sono</button> <button class="it-word known current" type="button" data-word="stanco" data-meaning="tired" data-ru="уставший" data-chapter="2" data-category="Everyday Adjectives" style="--known:#f3f0dd">stanco</button> <button class="it-word known" type="button" data-word="faccio" data-meaning="I do / make" data-ru="я делаю" data-chapter="1" data-category="Core Verbs 1" style="--known:#e4f2ff">faccio</button> <button class="it-word known current" type="button" data-word="una" data-meaning="a / an" data-ru="неопределённый артикль ж.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">una</button> <button class="it-word extra" type="button" data-word="piccola" data-meaning="small" data-ru="маленькая">piccola</button> <button class="it-word extra" type="button" data-word="pausa" data-meaning="break / pause" data-ru="перерыв">pausa</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>6</span><b class="back-label">English</b></div>
+        <div class="back-text"><span class="known-en" style="--known:#fff0dc" title="Course item · Chapter 1">When</span> <span class="known-en" style="--known:#f6e8ff" title="Course item · Chapter 1">I</span> am <span class="known-en current" style="--known:#f3f0dd" title="Course item · Chapter 2">tired</span>, <span class="known-en current" style="--known:#e4f2ff" title="Course item · Chapter 2">I take</span> a short break.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="A volte mangio a casa tra una lezione e l’altra." data-en="Sometimes I eat at home between lessons." data-ru="Иногда я ем дома между уроками." data-ithtml="&lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;A&quot; data-meaning=&quot;to / at&quot; data-ru=&quot;к / в / на&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;A&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;volte&quot; data-meaning=&quot;times&quot; data-ru=&quot;разы&quot;&gt;volte&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;mangio&quot; data-meaning=&quot;I eat&quot; data-ru=&quot;я ем&quot; data-chapter=&quot;2&quot; data-category=&quot;Useful Verb Forms&quot; style=&quot;--known:#e4f2ff&quot;&gt;mangio&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;a&quot; data-meaning=&quot;to / at&quot; data-ru=&quot;к / в / на&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;a&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;casa&quot; data-meaning=&quot;house / home&quot; data-ru=&quot;дом&quot; data-chapter=&quot;1&quot; data-category=&quot;Places &amp;amp; Languages&quot; style=&quot;--known:#f1e8dc&quot;&gt;casa&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;tra&quot; data-meaning=&quot;between / among / in&quot; data-ru=&quot;между / среди / через&quot;&gt;tra&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;una&quot; data-meaning=&quot;a / an&quot; data-ru=&quot;неопределённый артикль ж.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;una&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;lezione&quot; data-meaning=&quot;lesson&quot; data-ru=&quot;урок&quot;&gt;lezione&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;e&quot; data-meaning=&quot;and&quot; data-ru=&quot;и&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;e&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;l’altra&quot; data-meaning=&quot;the other&quot; data-ru=&quot;другая&quot;&gt;l’altra&lt;/button&gt;." data-enhtml="Sometimes &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f2ff&quot; title=&quot;Course item · Chapter 2&quot;&gt;I eat&lt;/span&gt; at home between lessons.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>7</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word known" type="button" data-word="A" data-meaning="to / at" data-ru="к / в / на" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">A</button> <button class="it-word extra" type="button" data-word="volte" data-meaning="times" data-ru="разы">volte</button> <button class="it-word known current" type="button" data-word="mangio" data-meaning="I eat" data-ru="я ем" data-chapter="2" data-category="Useful Verb Forms" style="--known:#e4f2ff">mangio</button> <button class="it-word known" type="button" data-word="a" data-meaning="to / at" data-ru="к / в / на" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">a</button> <button class="it-word known" type="button" data-word="casa" data-meaning="house / home" data-ru="дом" data-chapter="1" data-category="Places &amp; Languages" style="--known:#f1e8dc">casa</button> <button class="it-word extra" type="button" data-word="tra" data-meaning="between / among / in" data-ru="между / среди / через">tra</button> <button class="it-word known current" type="button" data-word="una" data-meaning="a / an" data-ru="неопределённый артикль ж.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">una</button> <button class="it-word extra" type="button" data-word="lezione" data-meaning="lesson" data-ru="урок">lezione</button> <button class="it-word known" type="button" data-word="e" data-meaning="and" data-ru="и" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">e</button> <button class="it-word extra" type="button" data-word="l’altra" data-meaning="the other" data-ru="другая">l’altra</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>7</span><b class="back-label">English</b></div>
+        <div class="back-text">Sometimes <span class="known-en current" style="--known:#e4f2ff" title="Course item · Chapter 2">I eat</span> at home between lessons.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="Nel pomeriggio ho più energia per studiare." data-en="In the afternoon I have more energy for studying." data-ru="Днём у меня больше энергии для учёбы." data-ithtml="&lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;Nel&quot; data-meaning=&quot;in the&quot; data-ru=&quot;в (с артиклем)&quot;&gt;Nel&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;pomeriggio&quot; data-meaning=&quot;afternoon&quot; data-ru=&quot;день / после полудня&quot; data-chapter=&quot;2&quot; data-category=&quot;Daily Time&quot; style=&quot;--known:#fff0dc&quot;&gt;pomeriggio&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;ho&quot; data-meaning=&quot;I have&quot; data-ru=&quot;у меня есть&quot; data-chapter=&quot;1&quot; data-category=&quot;Be &amp;amp; Have&quot; style=&quot;--known:#ffe9ec&quot;&gt;ho&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;più&quot; data-meaning=&quot;more / most&quot; data-ru=&quot;больше / более&quot;&gt;più&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;energia&quot; data-meaning=&quot;energy&quot; data-ru=&quot;энергия&quot;&gt;energia&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;per&quot; data-meaning=&quot;for / to&quot; data-ru=&quot;для / чтобы&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;per&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;studiare&quot; data-meaning=&quot;to study&quot; data-ru=&quot;учиться / изучать&quot; data-chapter=&quot;1&quot; data-category=&quot;Core Verbs 2&quot; style=&quot;--known:#f3f0dd&quot;&gt;studiare&lt;/button&gt;." data-enhtml="In &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f4ef&quot; title=&quot;Course item · Chapter 2&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;known-en current&quot; style=&quot;--known:#fff0dc&quot; title=&quot;Course item · Chapter 2&quot;&gt;afternoon&lt;/span&gt; &lt;span class=&quot;known-en&quot; style=&quot;--known:#ffe9ec&quot; title=&quot;Course item · Chapter 1&quot;&gt;I have&lt;/span&gt; more energy for studying.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>8</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word extra" type="button" data-word="Nel" data-meaning="in the" data-ru="в (с артиклем)">Nel</button> <button class="it-word known current" type="button" data-word="pomeriggio" data-meaning="afternoon" data-ru="день / после полудня" data-chapter="2" data-category="Daily Time" style="--known:#fff0dc">pomeriggio</button> <button class="it-word known" type="button" data-word="ho" data-meaning="I have" data-ru="у меня есть" data-chapter="1" data-category="Be &amp; Have" style="--known:#ffe9ec">ho</button> <button class="it-word extra" type="button" data-word="più" data-meaning="more / most" data-ru="больше / более">più</button> <button class="it-word extra" type="button" data-word="energia" data-meaning="energy" data-ru="энергия">energia</button> <button class="it-word known" type="button" data-word="per" data-meaning="for / to" data-ru="для / чтобы" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">per</button> <button class="it-word known" type="button" data-word="studiare" data-meaning="to study" data-ru="учиться / изучать" data-chapter="1" data-category="Core Verbs 2" style="--known:#f3f0dd">studiare</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>8</span><b class="back-label">English</b></div>
+        <div class="back-text">In <span class="known-en current" style="--known:#e4f4ef" title="Course item · Chapter 2">the</span> <span class="known-en current" style="--known:#fff0dc" title="Course item · Chapter 2">afternoon</span> <span class="known-en" style="--known:#ffe9ec" title="Course item · Chapter 1">I have</span> more energy for studying.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="Cerco di non andare a dormire troppo tardi." data-en="I try not to go to sleep too late." data-ru="Я стараюсь не ложиться спать слишком поздно." data-ithtml="&lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;Cerco&quot; data-meaning=&quot;I look for / I try&quot; data-ru=&quot;я ищу / стараюсь&quot;&gt;Cerco&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;di&quot; data-meaning=&quot;of / from&quot; data-ru=&quot;из / от / о&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;di&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;non&quot; data-meaning=&quot;not&quot; data-ru=&quot;не&quot;&gt;non&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;andare&quot; data-meaning=&quot;to go&quot; data-ru=&quot;идти / ехать&quot; data-chapter=&quot;1&quot; data-category=&quot;Core Verbs 1&quot; style=&quot;--known:#e4f2ff&quot;&gt;andare&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;a&quot; data-meaning=&quot;to / at&quot; data-ru=&quot;к / в / на&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;a&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;dormire&quot; data-meaning=&quot;to sleep&quot; data-ru=&quot;спать&quot; data-chapter=&quot;2&quot; data-category=&quot;Useful Verbs&quot; style=&quot;--known:#ffe9ec&quot;&gt;dormire&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;troppo&quot; data-meaning=&quot;too much / too&quot; data-ru=&quot;слишком / слишком много&quot;&gt;troppo&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;tardi&quot; data-meaning=&quot;late&quot; data-ru=&quot;поздно&quot; data-chapter=&quot;2&quot; data-category=&quot;Daily Time&quot; style=&quot;--known:#fff0dc&quot;&gt;tardi&lt;/button&gt;." data-enhtml="&lt;span class=&quot;known-en&quot; style=&quot;--known:#f6e8ff&quot; title=&quot;Course item · Chapter 1&quot;&gt;I&lt;/span&gt; try not &lt;span class=&quot;known-en&quot; style=&quot;--known:#e4f2ff&quot; title=&quot;Course item · Chapter 1&quot;&gt;to go&lt;/span&gt; &lt;span class=&quot;known-en current&quot; style=&quot;--known:#ffe9ec&quot; title=&quot;Course item · Chapter 2&quot;&gt;to sleep&lt;/span&gt; too &lt;span class=&quot;known-en current&quot; style=&quot;--known:#fff0dc&quot; title=&quot;Course item · Chapter 2&quot;&gt;late&lt;/span&gt;.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>9</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word extra" type="button" data-word="Cerco" data-meaning="I look for / I try" data-ru="я ищу / стараюсь">Cerco</button> <button class="it-word known" type="button" data-word="di" data-meaning="of / from" data-ru="из / от / о" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">di</button> <button class="it-word extra" type="button" data-word="non" data-meaning="not" data-ru="не">non</button> <button class="it-word known" type="button" data-word="andare" data-meaning="to go" data-ru="идти / ехать" data-chapter="1" data-category="Core Verbs 1" style="--known:#e4f2ff">andare</button> <button class="it-word known" type="button" data-word="a" data-meaning="to / at" data-ru="к / в / на" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">a</button> <button class="it-word known current" type="button" data-word="dormire" data-meaning="to sleep" data-ru="спать" data-chapter="2" data-category="Useful Verbs" style="--known:#ffe9ec">dormire</button> <button class="it-word extra" type="button" data-word="troppo" data-meaning="too much / too" data-ru="слишком / слишком много">troppo</button> <button class="it-word known current" type="button" data-word="tardi" data-meaning="late" data-ru="поздно" data-chapter="2" data-category="Daily Time" style="--known:#fff0dc">tardi</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>9</span><b class="back-label">English</b></div>
+        <div class="back-text"><span class="known-en" style="--known:#f6e8ff" title="Course item · Chapter 1">I</span> try not <span class="known-en" style="--known:#e4f2ff" title="Course item · Chapter 1">to go</span> <span class="known-en current" style="--known:#ffe9ec" title="Course item · Chapter 2">to sleep</span> too <span class="known-en current" style="--known:#fff0dc" title="Course item · Chapter 2">late</span>.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="La sera preferisco attività semplici e tranquille." data-en="In the evening I prefer simple, calm activities." data-ru="Вечером я предпочитаю простые и спокойные занятия." data-ithtml="&lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;La&quot; data-meaning=&quot;the&quot; data-ru=&quot;определённый артикль ж.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;La&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;sera&quot; data-meaning=&quot;evening&quot; data-ru=&quot;вечер&quot; data-chapter=&quot;1&quot; data-category=&quot;Time&quot; style=&quot;--known:#e9eeff&quot;&gt;sera&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;preferisco&quot; data-meaning=&quot;I prefer&quot; data-ru=&quot;я предпочитаю&quot;&gt;preferisco&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;attività&quot; data-meaning=&quot;activity / activities&quot; data-ru=&quot;деятельность / занятия&quot;&gt;attività&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;semplici&quot; data-meaning=&quot;simple&quot; data-ru=&quot;простые&quot;&gt;semplici&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;e&quot; data-meaning=&quot;and&quot; data-ru=&quot;и&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;e&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;tranquille&quot; data-meaning=&quot;calm / quiet&quot; data-ru=&quot;спокойные&quot;&gt;tranquille&lt;/button&gt;." data-enhtml="In &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f4ef&quot; title=&quot;Course item · Chapter 2&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;known-en&quot; style=&quot;--known:#e9eeff&quot; title=&quot;Course item · Chapter 1&quot;&gt;evening&lt;/span&gt; &lt;span class=&quot;known-en&quot; style=&quot;--known:#f6e8ff&quot; title=&quot;Course item · Chapter 1&quot;&gt;I&lt;/span&gt; prefer simple, calm activities.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>10</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word known current" type="button" data-word="La" data-meaning="the" data-ru="определённый артикль ж.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">La</button> <button class="it-word known" type="button" data-word="sera" data-meaning="evening" data-ru="вечер" data-chapter="1" data-category="Time" style="--known:#e9eeff">sera</button> <button class="it-word extra" type="button" data-word="preferisco" data-meaning="I prefer" data-ru="я предпочитаю">preferisco</button> <button class="it-word extra" type="button" data-word="attività" data-meaning="activity / activities" data-ru="деятельность / занятия">attività</button> <button class="it-word extra" type="button" data-word="semplici" data-meaning="simple" data-ru="простые">semplici</button> <button class="it-word known" type="button" data-word="e" data-meaning="and" data-ru="и" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">e</button> <button class="it-word extra" type="button" data-word="tranquille" data-meaning="calm / quiet" data-ru="спокойные">tranquille</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>10</span><b class="back-label">English</b></div>
+        <div class="back-text">In <span class="known-en current" style="--known:#e4f4ef" title="Course item · Chapter 2">the</span> <span class="known-en" style="--known:#e9eeff" title="Course item · Chapter 1">evening</span> <span class="known-en" style="--known:#f6e8ff" title="Course item · Chapter 1">I</span> prefer simple, calm activities.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="Non tutti i giorni sono uguali." data-en="Not every day is the same." data-ru="Не все дни одинаковые." data-ithtml="&lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;Non&quot; data-meaning=&quot;not&quot; data-ru=&quot;не&quot;&gt;Non&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;tutti&quot; data-meaning=&quot;all / everyone&quot; data-ru=&quot;все&quot;&gt;tutti&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;i&quot; data-meaning=&quot;the (plural)&quot; data-ru=&quot;определённый артикль мн.ч.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;i&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;giorni&quot; data-meaning=&quot;days&quot; data-ru=&quot;дни&quot;&gt;giorni&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;sono&quot; data-meaning=&quot;I am / they are&quot; data-ru=&quot;я есть / они есть&quot; data-chapter=&quot;1&quot; data-category=&quot;Be &amp;amp; Have&quot; style=&quot;--known:#ffe9ec&quot;&gt;sono&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;uguali&quot; data-meaning=&quot;equal / the same&quot; data-ru=&quot;одинаковые&quot;&gt;uguali&lt;/button&gt;." data-enhtml="Not every &lt;span class=&quot;known-en&quot; style=&quot;--known:#e9eeff&quot; title=&quot;Course item · Chapter 1&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;known-en&quot; style=&quot;--known:#ffe9ec&quot; title=&quot;Course item · Chapter 1&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f4ef&quot; title=&quot;Course item · Chapter 2&quot;&gt;the&lt;/span&gt; same.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>11</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word extra" type="button" data-word="Non" data-meaning="not" data-ru="не">Non</button> <button class="it-word extra" type="button" data-word="tutti" data-meaning="all / everyone" data-ru="все">tutti</button> <button class="it-word known current" type="button" data-word="i" data-meaning="the (plural)" data-ru="определённый артикль мн.ч." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">i</button> <button class="it-word extra" type="button" data-word="giorni" data-meaning="days" data-ru="дни">giorni</button> <button class="it-word known" type="button" data-word="sono" data-meaning="I am / they are" data-ru="я есть / они есть" data-chapter="1" data-category="Be &amp; Have" style="--known:#ffe9ec">sono</button> <button class="it-word extra" type="button" data-word="uguali" data-meaning="equal / the same" data-ru="одинаковые">uguali</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>11</span><b class="back-label">English</b></div>
+        <div class="back-text">Not every <span class="known-en" style="--known:#e9eeff" title="Course item · Chapter 1">day</span> <span class="known-en" style="--known:#ffe9ec" title="Course item · Chapter 1">is</span> <span class="known-en current" style="--known:#e4f4ef" title="Course item · Chapter 2">the</span> same.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="Per me una buona routine deve essere facile da seguire." data-en="For me, a good routine should be easy to follow." data-ru="Для меня хороший распорядок должен быть простым." data-ithtml="&lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;Per&quot; data-meaning=&quot;for / to&quot; data-ru=&quot;для / чтобы&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;Per&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;me&quot; data-meaning=&quot;me&quot; data-ru=&quot;меня / мне&quot;&gt;me&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;una&quot; data-meaning=&quot;a / an&quot; data-ru=&quot;неопределённый артикль ж.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;una&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;buona&quot; data-meaning=&quot;good&quot; data-ru=&quot;хорошая&quot;&gt;buona&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;routine&quot; data-meaning=&quot;routine&quot; data-ru=&quot;распорядок / рутина&quot;&gt;routine&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;deve&quot; data-meaning=&quot;must / has to&quot; data-ru=&quot;должен / нужно&quot;&gt;deve&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;essere&quot; data-meaning=&quot;to be&quot; data-ru=&quot;быть&quot; data-chapter=&quot;1&quot; data-category=&quot;Be &amp;amp; Have&quot; style=&quot;--known:#ffe9ec&quot;&gt;essere&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;facile&quot; data-meaning=&quot;easy&quot; data-ru=&quot;лёгкий&quot; data-chapter=&quot;2&quot; data-category=&quot;Everyday Adjectives&quot; style=&quot;--known:#f3f0dd&quot;&gt;facile&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;da&quot; data-meaning=&quot;from / by / at&quot; data-ru=&quot;из / от / у / с&quot;&gt;da&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;seguire&quot; data-meaning=&quot;to follow&quot; data-ru=&quot;следовать / следить&quot;&gt;seguire&lt;/button&gt;." data-enhtml="For me, a &lt;span class=&quot;known-en&quot; style=&quot;--known:#fff0dc&quot; title=&quot;Course item · Chapter 1&quot;&gt;good&lt;/span&gt; routine should be &lt;span class=&quot;known-en current&quot; style=&quot;--known:#f3f0dd&quot; title=&quot;Course item · Chapter 2&quot;&gt;easy&lt;/span&gt; to follow.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>12</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word known" type="button" data-word="Per" data-meaning="for / to" data-ru="для / чтобы" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">Per</button> <button class="it-word extra" type="button" data-word="me" data-meaning="me" data-ru="меня / мне">me</button> <button class="it-word known current" type="button" data-word="una" data-meaning="a / an" data-ru="неопределённый артикль ж.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">una</button> <button class="it-word extra" type="button" data-word="buona" data-meaning="good" data-ru="хорошая">buona</button> <button class="it-word extra" type="button" data-word="routine" data-meaning="routine" data-ru="распорядок / рутина">routine</button> <button class="it-word extra" type="button" data-word="deve" data-meaning="must / has to" data-ru="должен / нужно">deve</button> <button class="it-word known" type="button" data-word="essere" data-meaning="to be" data-ru="быть" data-chapter="1" data-category="Be &amp; Have" style="--known:#ffe9ec">essere</button> <button class="it-word known current" type="button" data-word="facile" data-meaning="easy" data-ru="лёгкий" data-chapter="2" data-category="Everyday Adjectives" style="--known:#f3f0dd">facile</button> <button class="it-word extra" type="button" data-word="da" data-meaning="from / by / at" data-ru="из / от / у / с">da</button> <button class="it-word extra" type="button" data-word="seguire" data-meaning="to follow" data-ru="следовать / следить">seguire</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>12</span><b class="back-label">English</b></div>
+        <div class="back-text">For me, a <span class="known-en" style="--known:#fff0dc" title="Course item · Chapter 1">good</span> routine should be <span class="known-en current" style="--known:#f3f0dd" title="Course item · Chapter 2">easy</span> to follow.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article></div>
+
+ <div class="section-head"><h2>Daily Life &amp; Home · topic text</h2><p>A separate reading text. It uses current vocabulary and deliberately brings back useful language from previous chapters.</p></div>
+ <div class="sentences"><article class="sentence" data-it="Sara vive con la sua famiglia in un appartamento." data-en="Sara lives with her family in an apartment." data-ru="Сара живёт с семьёй в квартире." data-ithtml="&lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;Sara&quot; data-meaning=&quot;Sara&quot; data-ru=&quot;Сара&quot;&gt;Sara&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;vive&quot; data-meaning=&quot;lives&quot; data-ru=&quot;живёт&quot;&gt;vive&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;con&quot; data-meaning=&quot;with&quot; data-ru=&quot;с&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;con&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;la&quot; data-meaning=&quot;the&quot; data-ru=&quot;определённый артикль ж.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;la&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;sua&quot; data-meaning=&quot;his / her&quot; data-ru=&quot;его / её&quot;&gt;sua&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;famiglia&quot; data-meaning=&quot;family&quot; data-ru=&quot;семья&quot; data-chapter=&quot;1&quot; data-category=&quot;People &amp;amp; Family&quot; style=&quot;--known:#e8f3f0&quot;&gt;famiglia&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;in&quot; data-meaning=&quot;in / to&quot; data-ru=&quot;в / на&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;in&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;un&quot; data-meaning=&quot;a / an&quot; data-ru=&quot;неопределённый артикль м.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;un&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;appartamento&quot; data-meaning=&quot;apartment&quot; data-ru=&quot;квартира&quot; data-chapter=&quot;2&quot; data-category=&quot;Home&quot; style=&quot;--known:#f6e8ff&quot;&gt;appartamento&lt;/button&gt;." data-enhtml="Sara lives &lt;span class=&quot;known-en&quot; style=&quot;--known:#e9f7df&quot; title=&quot;Course item · Chapter 1&quot;&gt;with&lt;/span&gt; her &lt;span class=&quot;known-en&quot; style=&quot;--known:#e8f3f0&quot; title=&quot;Course item · Chapter 1&quot;&gt;family&lt;/span&gt; in an &lt;span class=&quot;known-en current&quot; style=&quot;--known:#f6e8ff&quot; title=&quot;Course item · Chapter 2&quot;&gt;apartment&lt;/span&gt;.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>1</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word extra" type="button" data-word="Sara" data-meaning="Sara" data-ru="Сара">Sara</button> <button class="it-word extra" type="button" data-word="vive" data-meaning="lives" data-ru="живёт">vive</button> <button class="it-word known" type="button" data-word="con" data-meaning="with" data-ru="с" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">con</button> <button class="it-word known current" type="button" data-word="la" data-meaning="the" data-ru="определённый артикль ж.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">la</button> <button class="it-word extra" type="button" data-word="sua" data-meaning="his / her" data-ru="его / её">sua</button> <button class="it-word known" type="button" data-word="famiglia" data-meaning="family" data-ru="семья" data-chapter="1" data-category="People &amp; Family" style="--known:#e8f3f0">famiglia</button> <button class="it-word known" type="button" data-word="in" data-meaning="in / to" data-ru="в / на" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">in</button> <button class="it-word known current" type="button" data-word="un" data-meaning="a / an" data-ru="неопределённый артикль м.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">un</button> <button class="it-word known current" type="button" data-word="appartamento" data-meaning="apartment" data-ru="квартира" data-chapter="2" data-category="Home" style="--known:#f6e8ff">appartamento</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>1</span><b class="back-label">English</b></div>
+        <div class="back-text">Sara lives <span class="known-en" style="--known:#e9f7df" title="Course item · Chapter 1">with</span> her <span class="known-en" style="--known:#e8f3f0" title="Course item · Chapter 1">family</span> in an <span class="known-en current" style="--known:#f6e8ff" title="Course item · Chapter 2">apartment</span>.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="La mattina apre la finestra e prepara la colazione." data-en="In the morning she opens the window and prepares breakfast." data-ru="Утром она открывает окно и готовит завтрак." data-ithtml="&lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;La&quot; data-meaning=&quot;the&quot; data-ru=&quot;определённый артикль ж.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;La&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;mattina&quot; data-meaning=&quot;morning&quot; data-ru=&quot;утро&quot; data-chapter=&quot;2&quot; data-category=&quot;Daily Time&quot; style=&quot;--known:#fff0dc&quot;&gt;mattina&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;apre&quot; data-meaning=&quot;opens&quot; data-ru=&quot;открывает / открывается&quot;&gt;apre&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;la&quot; data-meaning=&quot;the&quot; data-ru=&quot;определённый артикль ж.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;la&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;finestra&quot; data-meaning=&quot;window&quot; data-ru=&quot;окно&quot; data-chapter=&quot;2&quot; data-category=&quot;Home&quot; style=&quot;--known:#f6e8ff&quot;&gt;finestra&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;e&quot; data-meaning=&quot;and&quot; data-ru=&quot;и&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;e&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;prepara&quot; data-meaning=&quot;prepares&quot; data-ru=&quot;готовит / подготавливает&quot;&gt;prepara&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;la&quot; data-meaning=&quot;the&quot; data-ru=&quot;определённый артикль ж.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;la&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;colazione&quot; data-meaning=&quot;breakfast&quot; data-ru=&quot;завтрак&quot; data-chapter=&quot;2&quot; data-category=&quot;Food Basics&quot; style=&quot;--known:#e9f7df&quot;&gt;colazione&lt;/button&gt;." data-enhtml="In &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f4ef&quot; title=&quot;Course item · Chapter 2&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;known-en current&quot; style=&quot;--known:#fff0dc&quot; title=&quot;Course item · Chapter 2&quot;&gt;morning&lt;/span&gt; she opens &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f4ef&quot; title=&quot;Course item · Chapter 2&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;known-en current&quot; style=&quot;--known:#f6e8ff&quot; title=&quot;Course item · Chapter 2&quot;&gt;window&lt;/span&gt; &lt;span class=&quot;known-en&quot; style=&quot;--known:#e9f7df&quot; title=&quot;Course item · Chapter 1&quot;&gt;and&lt;/span&gt; prepares &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e9f7df&quot; title=&quot;Course item · Chapter 2&quot;&gt;breakfast&lt;/span&gt;.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>2</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word known current" type="button" data-word="La" data-meaning="the" data-ru="определённый артикль ж.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">La</button> <button class="it-word known current" type="button" data-word="mattina" data-meaning="morning" data-ru="утро" data-chapter="2" data-category="Daily Time" style="--known:#fff0dc">mattina</button> <button class="it-word extra" type="button" data-word="apre" data-meaning="opens" data-ru="открывает / открывается">apre</button> <button class="it-word known current" type="button" data-word="la" data-meaning="the" data-ru="определённый артикль ж.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">la</button> <button class="it-word known current" type="button" data-word="finestra" data-meaning="window" data-ru="окно" data-chapter="2" data-category="Home" style="--known:#f6e8ff">finestra</button> <button class="it-word known" type="button" data-word="e" data-meaning="and" data-ru="и" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">e</button> <button class="it-word extra" type="button" data-word="prepara" data-meaning="prepares" data-ru="готовит / подготавливает">prepara</button> <button class="it-word known current" type="button" data-word="la" data-meaning="the" data-ru="определённый артикль ж.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">la</button> <button class="it-word known current" type="button" data-word="colazione" data-meaning="breakfast" data-ru="завтрак" data-chapter="2" data-category="Food Basics" style="--known:#e9f7df">colazione</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>2</span><b class="back-label">English</b></div>
+        <div class="back-text">In <span class="known-en current" style="--known:#e4f4ef" title="Course item · Chapter 2">the</span> <span class="known-en current" style="--known:#fff0dc" title="Course item · Chapter 2">morning</span> she opens <span class="known-en current" style="--known:#e4f4ef" title="Course item · Chapter 2">the</span> <span class="known-en current" style="--known:#f6e8ff" title="Course item · Chapter 2">window</span> <span class="known-en" style="--known:#e9f7df" title="Course item · Chapter 1">and</span> prepares <span class="known-en current" style="--known:#e9f7df" title="Course item · Chapter 2">breakfast</span>.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="Suo fratello dorme ancora, ma i genitori sono già in cucina." data-en="Her brother is still sleeping, but her parents are already in the kitchen." data-ru="Её брат ещё спит, но родители уже на кухне." data-ithtml="&lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;Suo&quot; data-meaning=&quot;his / her&quot; data-ru=&quot;его / её&quot;&gt;Suo&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;fratello&quot; data-meaning=&quot;brother&quot; data-ru=&quot;брат&quot; data-chapter=&quot;2&quot; data-category=&quot;Family&quot; style=&quot;--known:#e8f3f0&quot;&gt;fratello&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;dorme&quot; data-meaning=&quot;sleeps&quot; data-ru=&quot;спит&quot;&gt;dorme&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;ancora&quot; data-meaning=&quot;again / still&quot; data-ru=&quot;снова / ещё&quot; data-chapter=&quot;2&quot; data-category=&quot;Everyday Chunks&quot; style=&quot;--known:#f1e8dc&quot;&gt;ancora&lt;/button&gt;, &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;ma&quot; data-meaning=&quot;but&quot; data-ru=&quot;но&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;ma&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;i&quot; data-meaning=&quot;the (plural)&quot; data-ru=&quot;определённый артикль мн.ч.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;i&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;genitori&quot; data-meaning=&quot;parents&quot; data-ru=&quot;родители&quot; data-chapter=&quot;2&quot; data-category=&quot;Family&quot; style=&quot;--known:#e8f3f0&quot;&gt;genitori&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;sono&quot; data-meaning=&quot;I am / they are&quot; data-ru=&quot;я есть / они есть&quot; data-chapter=&quot;1&quot; data-category=&quot;Be &amp;amp; Have&quot; style=&quot;--known:#ffe9ec&quot;&gt;sono&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;già&quot; data-meaning=&quot;already&quot; data-ru=&quot;уже&quot;&gt;già&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;in&quot; data-meaning=&quot;in / to&quot; data-ru=&quot;в / на&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;in&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;cucina&quot; data-meaning=&quot;kitchen&quot; data-ru=&quot;кухня&quot; data-chapter=&quot;2&quot; data-category=&quot;Home&quot; style=&quot;--known:#f6e8ff&quot;&gt;cucina&lt;/button&gt;." data-enhtml="Her &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e8f3f0&quot; title=&quot;Course item · Chapter 2&quot;&gt;brother&lt;/span&gt; &lt;span class=&quot;known-en&quot; style=&quot;--known:#ffe9ec&quot; title=&quot;Course item · Chapter 1&quot;&gt;is&lt;/span&gt; still sleeping, &lt;span class=&quot;known-en&quot; style=&quot;--known:#e9f7df&quot; title=&quot;Course item · Chapter 1&quot;&gt;but&lt;/span&gt; her &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e8f3f0&quot; title=&quot;Course item · Chapter 2&quot;&gt;parents&lt;/span&gt; are already in &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f4ef&quot; title=&quot;Course item · Chapter 2&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;known-en current&quot; style=&quot;--known:#f6e8ff&quot; title=&quot;Course item · Chapter 2&quot;&gt;kitchen&lt;/span&gt;.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>3</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word extra" type="button" data-word="Suo" data-meaning="his / her" data-ru="его / её">Suo</button> <button class="it-word known current" type="button" data-word="fratello" data-meaning="brother" data-ru="брат" data-chapter="2" data-category="Family" style="--known:#e8f3f0">fratello</button> <button class="it-word extra" type="button" data-word="dorme" data-meaning="sleeps" data-ru="спит">dorme</button> <button class="it-word known current" type="button" data-word="ancora" data-meaning="again / still" data-ru="снова / ещё" data-chapter="2" data-category="Everyday Chunks" style="--known:#f1e8dc">ancora</button>, <button class="it-word known" type="button" data-word="ma" data-meaning="but" data-ru="но" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">ma</button> <button class="it-word known current" type="button" data-word="i" data-meaning="the (plural)" data-ru="определённый артикль мн.ч." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">i</button> <button class="it-word known current" type="button" data-word="genitori" data-meaning="parents" data-ru="родители" data-chapter="2" data-category="Family" style="--known:#e8f3f0">genitori</button> <button class="it-word known" type="button" data-word="sono" data-meaning="I am / they are" data-ru="я есть / они есть" data-chapter="1" data-category="Be &amp; Have" style="--known:#ffe9ec">sono</button> <button class="it-word extra" type="button" data-word="già" data-meaning="already" data-ru="уже">già</button> <button class="it-word known" type="button" data-word="in" data-meaning="in / to" data-ru="в / на" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">in</button> <button class="it-word known current" type="button" data-word="cucina" data-meaning="kitchen" data-ru="кухня" data-chapter="2" data-category="Home" style="--known:#f6e8ff">cucina</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>3</span><b class="back-label">English</b></div>
+        <div class="back-text">Her <span class="known-en current" style="--known:#e8f3f0" title="Course item · Chapter 2">brother</span> <span class="known-en" style="--known:#ffe9ec" title="Course item · Chapter 1">is</span> still sleeping, <span class="known-en" style="--known:#e9f7df" title="Course item · Chapter 1">but</span> her <span class="known-en current" style="--known:#e8f3f0" title="Course item · Chapter 2">parents</span> are already in <span class="known-en current" style="--known:#e4f4ef" title="Course item · Chapter 2">the</span> <span class="known-en current" style="--known:#f6e8ff" title="Course item · Chapter 2">kitchen</span>.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="Dopo colazione Sara legge per dieci minuti." data-en="After breakfast Sara reads for ten minutes." data-ru="После завтрака Сара читает десять минут." data-ithtml="&lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;Dopo&quot; data-meaning=&quot;after / afterwards&quot; data-ru=&quot;после / потом&quot; data-chapter=&quot;2&quot; data-category=&quot;Daily Time&quot; style=&quot;--known:#fff0dc&quot;&gt;Dopo&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;colazione&quot; data-meaning=&quot;breakfast&quot; data-ru=&quot;завтрак&quot; data-chapter=&quot;2&quot; data-category=&quot;Food Basics&quot; style=&quot;--known:#e9f7df&quot;&gt;colazione&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;Sara&quot; data-meaning=&quot;Sara&quot; data-ru=&quot;Сара&quot;&gt;Sara&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;legge&quot; data-meaning=&quot;reads&quot; data-ru=&quot;читает&quot;&gt;legge&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;per&quot; data-meaning=&quot;for / to&quot; data-ru=&quot;для / чтобы&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;per&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;dieci&quot; data-meaning=&quot;ten&quot; data-ru=&quot;десять&quot; data-chapter=&quot;2&quot; data-category=&quot;Numbers&quot; style=&quot;--known:#e9eeff&quot;&gt;dieci&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;minuti&quot; data-meaning=&quot;minutes&quot; data-ru=&quot;минуты&quot;&gt;minuti&lt;/button&gt;." data-enhtml="After &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e9f7df&quot; title=&quot;Course item · Chapter 2&quot;&gt;breakfast&lt;/span&gt; Sara reads for &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e9eeff&quot; title=&quot;Course item · Chapter 2&quot;&gt;ten&lt;/span&gt; minutes.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>4</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word known current" type="button" data-word="Dopo" data-meaning="after / afterwards" data-ru="после / потом" data-chapter="2" data-category="Daily Time" style="--known:#fff0dc">Dopo</button> <button class="it-word known current" type="button" data-word="colazione" data-meaning="breakfast" data-ru="завтрак" data-chapter="2" data-category="Food Basics" style="--known:#e9f7df">colazione</button> <button class="it-word extra" type="button" data-word="Sara" data-meaning="Sara" data-ru="Сара">Sara</button> <button class="it-word extra" type="button" data-word="legge" data-meaning="reads" data-ru="читает">legge</button> <button class="it-word known" type="button" data-word="per" data-meaning="for / to" data-ru="для / чтобы" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">per</button> <button class="it-word known current" type="button" data-word="dieci" data-meaning="ten" data-ru="десять" data-chapter="2" data-category="Numbers" style="--known:#e9eeff">dieci</button> <button class="it-word extra" type="button" data-word="minuti" data-meaning="minutes" data-ru="минуты">minuti</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>4</span><b class="back-label">English</b></div>
+        <div class="back-text">After <span class="known-en current" style="--known:#e9f7df" title="Course item · Chapter 2">breakfast</span> Sara reads for <span class="known-en current" style="--known:#e9eeff" title="Course item · Chapter 2">ten</span> minutes.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="Poi chiude la porta e va fuori." data-en="Then she closes the door and goes outside." data-ru="Потом она закрывает дверь и выходит." data-ithtml="&lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;Poi&quot; data-meaning=&quot;then / afterwards&quot; data-ru=&quot;потом / затем&quot;&gt;Poi&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;chiude&quot; data-meaning=&quot;closes&quot; data-ru=&quot;закрывает&quot;&gt;chiude&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;la&quot; data-meaning=&quot;the&quot; data-ru=&quot;определённый артикль ж.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;la&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;porta&quot; data-meaning=&quot;door&quot; data-ru=&quot;дверь&quot; data-chapter=&quot;2&quot; data-category=&quot;Home&quot; style=&quot;--known:#f6e8ff&quot;&gt;porta&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;e&quot; data-meaning=&quot;and&quot; data-ru=&quot;и&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;e&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;va&quot; data-meaning=&quot;goes / is going&quot; data-ru=&quot;идёт / едет&quot;&gt;va&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;fuori&quot; data-meaning=&quot;outside / out&quot; data-ru=&quot;снаружи / на улицу&quot;&gt;fuori&lt;/button&gt;." data-enhtml="Then she closes &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f4ef&quot; title=&quot;Course item · Chapter 2&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;known-en current&quot; style=&quot;--known:#f6e8ff&quot; title=&quot;Course item · Chapter 2&quot;&gt;door&lt;/span&gt; &lt;span class=&quot;known-en&quot; style=&quot;--known:#e9f7df&quot; title=&quot;Course item · Chapter 1&quot;&gt;and&lt;/span&gt; goes outside.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>5</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word extra" type="button" data-word="Poi" data-meaning="then / afterwards" data-ru="потом / затем">Poi</button> <button class="it-word extra" type="button" data-word="chiude" data-meaning="closes" data-ru="закрывает">chiude</button> <button class="it-word known current" type="button" data-word="la" data-meaning="the" data-ru="определённый артикль ж.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">la</button> <button class="it-word known current" type="button" data-word="porta" data-meaning="door" data-ru="дверь" data-chapter="2" data-category="Home" style="--known:#f6e8ff">porta</button> <button class="it-word known" type="button" data-word="e" data-meaning="and" data-ru="и" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">e</button> <button class="it-word extra" type="button" data-word="va" data-meaning="goes / is going" data-ru="идёт / едет">va</button> <button class="it-word extra" type="button" data-word="fuori" data-meaning="outside / out" data-ru="снаружи / на улицу">fuori</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>5</span><b class="back-label">English</b></div>
+        <div class="back-text">Then she closes <span class="known-en current" style="--known:#e4f4ef" title="Course item · Chapter 2">the</span> <span class="known-en current" style="--known:#f6e8ff" title="Course item · Chapter 2">door</span> <span class="known-en" style="--known:#e9f7df" title="Course item · Chapter 1">and</span> goes outside.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article>
+<article class="sentence" data-it="La sera torna a casa stanca ma felice." data-en="In the evening she returns home tired but happy." data-ru="Вечером она возвращается домой уставшая, но довольная." data-ithtml="&lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;La&quot; data-meaning=&quot;the&quot; data-ru=&quot;определённый артикль ж.р.&quot; data-chapter=&quot;2&quot; data-category=&quot;Articles &amp;amp; Determiners&quot; style=&quot;--known:#e4f4ef&quot;&gt;La&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;sera&quot; data-meaning=&quot;evening&quot; data-ru=&quot;вечер&quot; data-chapter=&quot;1&quot; data-category=&quot;Time&quot; style=&quot;--known:#e9eeff&quot;&gt;sera&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;torna&quot; data-meaning=&quot;returns / comes back&quot; data-ru=&quot;возвращается&quot;&gt;torna&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;a&quot; data-meaning=&quot;to / at&quot; data-ru=&quot;к / в / на&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;a&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;casa&quot; data-meaning=&quot;house / home&quot; data-ru=&quot;дом&quot; data-chapter=&quot;1&quot; data-category=&quot;Places &amp;amp; Languages&quot; style=&quot;--known:#f1e8dc&quot;&gt;casa&lt;/button&gt; &lt;button class=&quot;it-word extra&quot; type=&quot;button&quot; data-word=&quot;stanca&quot; data-meaning=&quot;tired&quot; data-ru=&quot;уставшая&quot;&gt;stanca&lt;/button&gt; &lt;button class=&quot;it-word known&quot; type=&quot;button&quot; data-word=&quot;ma&quot; data-meaning=&quot;but&quot; data-ru=&quot;но&quot; data-chapter=&quot;1&quot; data-category=&quot;Connectors &amp;amp; Prepositions&quot; style=&quot;--known:#e9f7df&quot;&gt;ma&lt;/button&gt; &lt;button class=&quot;it-word known current&quot; type=&quot;button&quot; data-word=&quot;felice&quot; data-meaning=&quot;happy&quot; data-ru=&quot;счастливый&quot; data-chapter=&quot;2&quot; data-category=&quot;Everyday Adjectives&quot; style=&quot;--known:#f3f0dd&quot;&gt;felice&lt;/button&gt;." data-enhtml="In &lt;span class=&quot;known-en current&quot; style=&quot;--known:#e4f4ef&quot; title=&quot;Course item · Chapter 2&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;known-en&quot; style=&quot;--known:#e9eeff&quot; title=&quot;Course item · Chapter 1&quot;&gt;evening&lt;/span&gt; she returns home &lt;span class=&quot;known-en current&quot; style=&quot;--known:#f3f0dd&quot; title=&quot;Course item · Chapter 2&quot;&gt;tired&lt;/span&gt; &lt;span class=&quot;known-en&quot; style=&quot;--known:#e9f7df&quot; title=&quot;Course item · Chapter 1&quot;&gt;but&lt;/span&gt; &lt;span class=&quot;known-en current&quot; style=&quot;--known:#f3f0dd&quot; title=&quot;Course item · Chapter 2&quot;&gt;happy&lt;/span&gt;.">
+  <div class="sinner">
+    <section class="sface sfront">
+      <div>
+        <div class="smeta"><span>6</span><b class="front-label">Italian</b></div>
+        <div class="front-text"><button class="it-word known current" type="button" data-word="La" data-meaning="the" data-ru="определённый артикль ж.р." data-chapter="2" data-category="Articles &amp; Determiners" style="--known:#e4f4ef">La</button> <button class="it-word known" type="button" data-word="sera" data-meaning="evening" data-ru="вечер" data-chapter="1" data-category="Time" style="--known:#e9eeff">sera</button> <button class="it-word extra" type="button" data-word="torna" data-meaning="returns / comes back" data-ru="возвращается">torna</button> <button class="it-word known" type="button" data-word="a" data-meaning="to / at" data-ru="к / в / на" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">a</button> <button class="it-word known" type="button" data-word="casa" data-meaning="house / home" data-ru="дом" data-chapter="1" data-category="Places &amp; Languages" style="--known:#f1e8dc">casa</button> <button class="it-word extra" type="button" data-word="stanca" data-meaning="tired" data-ru="уставшая">stanca</button> <button class="it-word known" type="button" data-word="ma" data-meaning="but" data-ru="но" data-chapter="1" data-category="Connectors &amp; Prepositions" style="--known:#e9f7df">ma</button> <button class="it-word known current" type="button" data-word="felice" data-meaning="happy" data-ru="счастливый" data-chapter="2" data-category="Everyday Adjectives" style="--known:#f3f0dd">felice</button>.</div>
+        <div class="sentence-note">Try first. Reveal only if you need help.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Flip</button></div>
+    </section>
+    <section class="sface sback">
+      <div>
+        <div class="smeta"><span>6</span><b class="back-label">English</b></div>
+        <div class="back-text">In <span class="known-en current" style="--known:#e4f4ef" title="Course item · Chapter 2">the</span> <span class="known-en" style="--known:#e9eeff" title="Course item · Chapter 1">evening</span> she returns home <span class="known-en current" style="--known:#f3f0dd" title="Course item · Chapter 2">tired</span> <span class="known-en" style="--known:#e9f7df" title="Course item · Chapter 1">but</span> <span class="known-en current" style="--known:#f3f0dd" title="Course item · Chapter 2">happy</span>.</div>
+      </div>
+      <div class="sactions"><button class="hear" type="button">🔊 Hear Italian</button><button class="flip" type="button">Back</button></div>
+    </section>
+  </div>
+</article></div>
+</section>
+
+<div class="bottom-nav"><a href="chapter_01.html">← Previous</a><a href="index.html">Course index</a><a href="chapter_03.html">Next →</a></div>
+</div>
+
+<div class="word-popup" id="popup">
+ <div class="wp-word" id="wpWord"></div><div class="wp-meaning" id="wpMeaning"></div><div class="wp-meta" id="wpMeta"></div>
+ <div class="wp-actions"><button id="wpHear">🔊 Hear Italian</button><button id="wpClose">Close</button></div>
+</div>
+
+<script>
+let frontMode='en', readMode='it', voices=[], activeWord='';
+const cards=[...document.querySelectorAll('.vcard')];
+
+function speak(text){
+ speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(text); u.lang='it-IT';
+ const i=parseInt(document.getElementById('voiceSelect').value); if(voices[i])u.voice=voices[i];
+ u.rate=parseFloat(document.getElementById('rate').value||'.84'); speechSynthesis.speak(u);
+}
+function score(v){const n=(v.name||'').toLowerCase();let s=0;if((v.lang||'').toLowerCase().startsWith('it'))s+=100;if(n.includes('natural'))s+=50;if(n.includes('enhanced'))s+=45;if(n.includes('google'))s+=35;if(n.includes('microsoft'))s+=30;if(n.includes('siri'))s+=25;return s}
+function loadVoices(){voices=speechSynthesis.getVoices().filter(v=>(v.lang||'').toLowerCase().startsWith('it')).sort((a,b)=>score(b)-score(a));const s=document.getElementById('voiceSelect');s.innerHTML='';if(!voices.length){s.innerHTML='<option value="-1">Italian system voice</option>';return} voices.forEach((v,i)=>{const o=document.createElement('option');o.value=i;o.textContent=v.name+' · '+v.lang+(i===0?' ★':'');s.appendChild(o)})}
+speechSynthesis.onvoiceschanged=loadVoices;loadVoices();
+
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.id===b.dataset.panel))});
+cards.forEach(c=>{
+ c.addEventListener('click',e=>{if(e.target.closest('button'))return;c.classList.toggle('flipped')});
+ c.querySelector('.speak-card').onclick=e=>{e.stopPropagation();speak(c.dataset.it)};
+});
+function setVFront(){
+ cards.forEach(c=>{const p=c.querySelector('.prompt');p.textContent=frontMode==='en'?c.dataset.en:c.dataset.ru});
+}
+document.querySelectorAll('.frontmode').forEach(b=>b.onclick=()=>{frontMode=b.dataset.front;document.querySelectorAll('.frontmode').forEach(x=>x.classList.toggle('active',x===b));cards.forEach(c=>c.classList.remove('flipped'));setVFront()});
+document.getElementById('flipAll').onclick=()=>cards.filter(c=>c.style.display!=='none').forEach(c=>c.classList.add('flipped'));
+document.getElementById('resetAll').onclick=()=>cards.forEach(c=>c.classList.remove('flipped'));
+document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));const cat=b.dataset.cat;cards.forEach(c=>c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none')});
+
+function renderSentence(c){
+ const f=c.querySelector('.front-text'), back=c.querySelector('.back-text'), fl=c.querySelector('.front-label'), bl=c.querySelector('.back-label'), note=c.querySelector('.sentence-note');
+ if(readMode==='it'){f.innerHTML=c.dataset.ithtml;fl.textContent='Italian';back.innerHTML=c.dataset.enhtml;bl.textContent='English';note.textContent='Try first. Reveal only if you need help.'}
+ else if(readMode==='en'){f.innerHTML=c.dataset.enhtml;fl.textContent='English → Italian';back.innerHTML=c.dataset.ithtml;bl.textContent='Italian answer';note.textContent='Produce the Italian sentence before you flip.'}
+ else {f.textContent=c.dataset.ru;fl.textContent='Russian → Italian';back.innerHTML=c.dataset.ithtml;bl.textContent='Italian answer';note.textContent='Produce the Italian sentence before you flip.'}
+ bindWords();
+}
+const sentences=[...document.querySelectorAll('.sentence')];
+sentences.forEach(c=>{
+ c.addEventListener('click',e=>{if(e.target.closest('button'))return;c.classList.toggle('flipped')});
+ c.querySelectorAll('.flip').forEach(b=>b.onclick=e=>{e.stopPropagation();c.classList.toggle('flipped')});
+ c.querySelectorAll('.hear').forEach(b=>b.onclick=e=>{e.stopPropagation();speak(c.dataset.it)});
+});
+document.querySelectorAll('.readmode').forEach(b=>b.onclick=()=>{readMode=b.dataset.mode;document.querySelectorAll('.readmode').forEach(x=>x.classList.toggle('active',x===b));sentences.forEach(c=>{c.classList.remove('flipped');renderSentence(c)})});
+document.getElementById('resetSent').onclick=()=>sentences.forEach(c=>c.classList.remove('flipped'));
+
+const popup=document.getElementById('popup');
+function bindWords(){
+ document.querySelectorAll('.it-word').forEach(w=>{if(w.dataset.bound)return;w.dataset.bound='1';w.onclick=e=>{e.stopPropagation();activeWord=w.dataset.word;document.getElementById('wpWord').textContent=w.dataset.word;document.getElementById('wpMeaning').textContent=w.dataset.meaning;const ch=w.dataset.chapter;document.getElementById('wpMeta').textContent=ch?('Course vocabulary · Chapter '+ch+' · '+w.dataset.category):'Extra context form · use sentence translation for context';popup.classList.add('open');speak(activeWord)}});
+}
+bindWords();
+document.getElementById('wpHear').onclick=()=>activeWord&&speak(activeWord);
+document.getElementById('wpClose').onclick=()=>popup.classList.remove('open');
+</script>
+</body></html>
